@@ -1,0 +1,43 @@
+body {
+  font-family: Marker Felt, fantasy;
+}
+a {
+  color: #2c5948;
+}
+a:hover {
+  color: #85c9af;
+}
+header {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #2c5948;
+}
+header h1 {
+  font-size: 2em;
+}
+header nav ul li {
+  display: inline;
+}
+.clear{
+  clear: both;
+}
+#project-container, #aboutme, #teach {
+  margin: 0 auto; /*centers projects div */
+  width: 90%; /*adds space on either side*/
+  max-width: 600px; /*keeps div from getting too wide*/
+}
+.project {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2c5948;
+}
+.project img, #aboutme img, #teach img {
+  width: 250px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.project h2, #aboutme h2, #teach h2{
+  font-size: 1.5em;  
+  margin-bottom: 10px;
+}
