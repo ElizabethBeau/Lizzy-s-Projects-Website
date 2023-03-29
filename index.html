@@ -1,0 +1,167 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Lizard Projects</title>
+  <link rel="icon" type="image/x-icon" href="/Photos/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button">Lizard Projects</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#About" class="w3-bar-item w3-button">About</a>
+      <a href="#Projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#TeachableMachine" class="w3-bar-item w3-button">
+        Teachable Machine</a>
+    </div>
+  </div>
+</div>
+
+  <div
+  <footer class="w3-center w3-black w3-padding-16">
+  <p>Lizard Projects
+  </p>
+    </div>
+  
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- music Section -->
+  <div class="w3-container w3-padding-32" id="Music">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-10"></h3>
+    <p>
+      Some Music For Your Stay
+    </p>
+     <audio controls autoplay>
+        <source src="lobby.mp3" type="audio/mp3">
+        <source src="lobby.mp3" type="audio/mp3">
+      </audio>
+  </div>
+
+  <!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="About">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-10">About</h3>
+    <p>I have always loved making things espesially when you can see the projects that you work on come into fruition. When I started working on all these projects it really inpired me to keep creating and inspire others to creat as well. 
+    </p>
+  </div>
+
+ 
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="Projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-10">Projects</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="Photos/claw.jpg" alt="Claw Machine" style="width:100%">
+      <h3>Claw Machine</h3>
+      <p class="w3-opacity">Robotics Club Project</p>
+      <p>The claw machine was a project done by me and two other students. When we recived the claw it was just a skeleton for which the machine was to be build off of, me and the two other students Aaron Tullino and Ian Flores finnished it.This included all of the electronics and wireing, the laser cutting of the pannels, coding, even adding features like a coin slot and lights.</p>
+    
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="Photos/catrat.png" alt="catrat" style="width:100%">
+      <h3>Cat and Rat</h3>
+      <p class="w3-opacity">Scratch Game</p>
+      <p>different sprites and backgrounds interact with one another's movements and to change bases on what you did as a player. The controls were easy but changing scenes and having moving obstacles was harder to make more solid. We used a lot of “if touching this color” blocks to activate most of our variables. It brought a lot of insight to us through making it though, the logic we practiced in making it was super helpful to what we are learning now. </p>
+    
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="Photos/carbon.png" alt="game" style="width:100%">
+      <h3>Carbon Counter</h3>
+      <p class="w3-opacity">Congressional App</p>
+      <p>This is our congressional app challenge app that we submitted to the challenge. The challenge was to creat an app that benifits people and we submitted it to congress. Out game was a carbon counter where you went through your day and it sould show you the effects your daily choices would have on your carbon out put. We used a series of list to hold our elemetns and various visuals to make this game appealing. In the end we won this app challege for our distric and were going to visit washington D.C.</p>
+     
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="Photos/square.png" alt="app" style="width:100%">
+      <h3>Rainbow Square</h3>
+      <p class="w3-opacity">Snap App</p>
+      <p>I created a snap project with a variety of different variables to make a series or squares in a certain perspective. Our goal was to just make a block to draw a square and to be able to change the side length very easily and we did it by making loops but I decided to take it a step further and I wanted to make random sized squares. The challenging part was putting it into perspective but I figured out that if you do a little math to distance the square based on its random side length you could then have the random square make themself into perspective.</p>
+    </div>
+    </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="TeachableMachine">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Teachable Machine</h3>
+    <p>Try out the teachable Machine.</p>
+      
+    <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script type="text/javascript">
+      // Classifier Variable
+      let classifier;
+      // Model URL
+      let imageModelURL = 'https://teachablemachine.withgoogle.com/models/hjoV4y1Jh/';
+      
+      // Video
+      let video;
+      let flippedVideo;
+      // To store the classification
+      let label = "";
+    
+      // Load the model first
+      function preload() {
+        classifier = ml5.imageClassifier(imageModelURL + 'model.json');
+      }
+    
+      function setup() {
+        createCanvas(320, 260);
+        // Create the video
+        video = createCapture(VIDEO);
+        video.size(320, 240);
+        video.hide();
+    
+        flippedVideo = ml5.flipImage(video);
+        // Start classifying
+        classifyVideo();
+      }
+    
+      function draw() {
+        background(0);
+        // Draw the video
+        image(flippedVideo, 0, 0);
+    
+        // Draw the label
+        fill(255);
+        textSize(16);
+        textAlign(CENTER);
+        text(label, width / 2, height - 4);
+      }
+    
+      // Get a prediction for the current video frame
+      function classifyVideo() {
+        flippedVideo = ml5.flipImage(video)
+        classifier.classify(flippedVideo, gotResult);
+        flippedVideo.remove();
+    
+      }
+    
+      // When we get a result
+      function gotResult(error, results) {
+        // If there is an error
+        if (error) {
+          console.error(error);
+          return;
+        }
+        // The results are in an array ordered by confidence.
+        // console.log(results[0]);
+        label = results[0].label;
+        // Classifiy again!
+        classifyVideo();
+      }
+    </script>
+      </div>
+</body>
+</html>
